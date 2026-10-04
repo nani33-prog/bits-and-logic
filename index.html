@@ -23,6 +23,24 @@
     <section class="band" id="boolean"><div class="wrap"><div class="section-head"><div><span class="eyebrow">03 · The language of logic</span><h2>Boolean algebra</h2></div><p>Boolean algebra is ordinary algebra for bits. It gives us a compact way to describe and simplify logic.</p></div><div class="boolean-grid"><article class="card"><h3>Three handy starting points</h3><div class="law-list"><div class="law"><strong>Identity</strong><code>A · 1 = A &nbsp; A + 0 = A</code></div><div class="law"><strong>Domination</strong><code>A · 0 = 0 &nbsp; A + 1 = 1</code></div><div class="law"><strong>Complement</strong><code>A · ¬A = 0 &nbsp; A + ¬A = 1</code></div><div class="law"><strong>Double NOT</strong><code>¬(¬A) = A</code></div><div class="law"><strong>Commutative</strong><code>A · B = B · A</code></div><div class="law"><strong>Distributive</strong><code>A · (B + C) = A·B + A·C</code></div></div></article><article class="card"><h3>Reading the symbols</h3><p>Variables like A and B stand for bits. A bar or ¬ means NOT, a dot means AND, and a plus means OR.</p><div class="notation">¬A &nbsp; = NOT A<br>A · B = A AND B<br>A + B = A OR B<br>A ⊕ B = A XOR B</div><p style="margin-top:14px;font-size:14px">Use the laws to make an expression simpler, which can mean fewer gates and a smaller circuit.</p></article></div></div></section>
     <section id="circuits"><div class="wrap"><div class="section-head"><div><span class="eyebrow">04 · Put gates together</span><h2>A simple circuit</h2></div><p>Imagine a room light controlled from two doors. Flipping either switch changes the light. XOR captures that behavior.</p></div><div class="circuit"><span class="eyebrow" style="color:var(--lime)">Two switches · one light</span><div class="circuit-flow" aria-label="Switch A and switch B feed an XOR gate which controls the light"><div class="input-pill">Switch A</div><span class="arrow-line" aria-hidden="true"></span><div class="mini-gate">XOR</div><span class="arrow-line" aria-hidden="true"></span><div class="output-pill">Light</div></div><div class="formula-large">Light = A ⊕ B</div><p class="circuit-note">If both switches match (0,0 or 1,1), the output is 0. If they differ, the output is 1. In a real hallway circuit, either switch can toggle the light.</p></div></div></section>
     <section class="band"><div class="wrap"><div class="section-head"><div><span class="eyebrow">05 · Logic with a memory</span><h2>When circuits remember</h2></div><p>So far, outputs depended only on the inputs right now. Sequential circuits also use stored information from the past.</p></div><div class="seq-grid"><article class="card seq-card"><span class="num">01 / COMBINATIONAL</span><h3>No memory</h3><p>Output depends only on current inputs. Adders and the gate circuits above are examples.</p></article><article class="card seq-card"><span class="num">02 / FLIP-FLOPS</span><h3>One stored bit</h3><p>A flip-flop is a tiny memory element. It can hold a 0 or 1, often updating on a clock tick.</p></article><article class="card seq-card"><span class="num">03 / SEQUENTIAL</span><h3>Bits over time</h3><p>Connect flip-flops to build registers and counters. Larger collections of stored bits form memory.</p></article></div><div class="takeaway"><b>Keep in mind</b><span>Combinational logic computes what happens now. Sequential logic uses what happened before, too.</span></div></div></section>
+  <section class="band" id="team">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Meet the team</span>
+          <h2>Team LOKI</h2>
+        </div>
+        <p>The team behind Bits &amp; Logic.</p>
+      </div>
+      <div class="seq-grid">
+        <article class="card seq-card"><h3>V. Nani Babu</h3></article>
+        <article class="card seq-card"><h3>M. Kushal Varma</h3></article>
+        <article class="card seq-card"><h3>V. Thanush</h3></article>
+        <article class="card seq-card"><h3>V. Praveen</h3></article>
+        <article class="card seq-card"><h3>M. Sai Sahith Varma</h3></article>
+      </div>
+    </div>
+  </section>
   </main>
   <footer class="footer"><div class="wrap footer-inner"><span>Bits &amp; Logic · A beginner’s guide to Digital Logic Design</span><a href="#top">Back to top ↑</a></div></footer>
   <script>
