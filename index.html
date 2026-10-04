@@ -41,7 +41,7 @@
     function convert(){const raw=numberInput.value.trim();const base=Number(numberBase.value);const valid=base===2?/^[01]+$/.test(raw):/^\d+$/.test(raw);if(!valid){conversionResult.textContent=base===2?'Use binary digits only: 0 and 1.':'Enter a whole decimal number.';return}const value=parseInt(raw,base);if(!Number.isSafeInteger(value)){conversionResult.textContent='Please enter a smaller whole number.';return}conversionResult.textContent=base===2?`${value} in decimal`:`${value.toString(2)} in binary`;}
     numberInput.addEventListener('input',convert);numberBase.addEventListener('change',convert);convert();
     const gateSelect=document.querySelector('#gateSelect'),inputA=document.querySelector('#inputA'),inputB=document.querySelector('#inputB'),inputBLabel=document.querySelector('#inputBLabel'),gateOutput=document.querySelector('#gateOutput');
-    function updateGate(){const name=gateSelect.value;const a=inputA.checked,b=inputB.checked;const gate=gates.find(g=>g.name===name);inputB.disabled=gate.single;inputBLabel.style.opacity=gate.single?'.45':'1';const value=Number(gate.fn(a,b));gateOutput.textContent=`Output: ${value}`;gateOutput.setAttribute('aria-label',`Output is ${value}`)}
+    function updateGate(){const name=gateSelect.value;const a=inputA.checked,b=inputB.checked;const gate=gates.find(g=>g.name===(name==='NOT A'?'NOT':name));inputB.disabled=gate.single;inputBLabel.style.opacity=gate.single?'.45':'1';const value=Number(gate.fn(a,b));gateOutput.textContent=`Output: ${value}`;gateOutput.setAttribute('aria-label',`Output is ${value}`)}
     [gateSelect,inputA,inputB].forEach(el=>el.addEventListener('change',updateGate));updateGate();
   </script>
 </body>
